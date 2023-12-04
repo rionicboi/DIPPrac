@@ -1,0 +1,13 @@
+im = imread("C:\CompSci\Sem 5\DIP\Programs\wallp1.jpg");
+subplot(2, 2, 1);
+title("Original");
+imshow(im);
+se = imcreatese('rect', 10, 10);
+im1 = imerode(im,se);
+subplot(2, 2, 2);
+title("Erode");
+imshow(im1);
+im2 = imdilate(im, se);
+subplot(2, 2, 3);
+title("Dilate");
+imshow(im2);

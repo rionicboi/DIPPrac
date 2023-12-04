@@ -1,0 +1,13 @@
+im = imread("C:\CompSci\Sem 5\DIP\Programs\wallp1.jpg");
+im = rgb2gray(im);
+strImg = imadjust(im, [0.05, 0.95], []);
+subplot(2,2,1), imshow(im), title('Original Image');
+subplot(2,2,2), imshow(strImg), title('Stretched Image');
+subplot(2,2,3);
+[count, cells] = imhist(im);
+plot2d3(cells, count); 
+title('Histogram of Original Image');
+subplot(2,2,4);
+[count, cells] = imhist(strImg);
+plot2d3(cells, count);
+title('Histogram of Stretched Image');
